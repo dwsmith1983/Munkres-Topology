@@ -72,12 +72,60 @@
   \{U\mid X - U\text{ is infinite or empty or all of } X\}
   \]
   a topology on \(X\)?
+  \par\smallskip
+  Example \(4\) states: Let \(X\) be a set; let \(\Tau_c\) be the collection of
+  all subsets \(U\) of \(X\) such that \(X - U\) is either countable or is all
+  of \(X\).
+  Then \(\Tau_c\) is a topology on \(X\).
+  \par\smallskip
+  First, we need to determine if \(X,\varnothing\in\Tau_c\).
+  We have that \(X - X = \varnothing\), and since \(\varnothing\) is finite,
+  \(\varnothing\) is countable so \(X - X = \varnothing\in\Tau_c\).
+  Now, \(X - \varnothing = X\) which is all of \(X\) so
+  \(X - \varnothing = X\in\Tau_c\).
+  Let \(\{U_{\alpha}\}\) be an indexed family of nonempty elements in
+  \(\Tau_c\).
+  Then
+  \[
+  X - \bigcup_{\alpha}U_{\alpha} = \bigcap_{\alpha}(X - U_{\alpha})
+  \]
+  By definition of the problem, \(U_{\alpha}\) is such that \(X - U_{\alpha}\)
+  is either countable or all of \(X\).
+  Since \(X - U_{\alpha}\) is countable, \(\bigcap_{\alpha}(X - U_{\alpha})\).
+  Therefore \(\bigcup_{\alpha}U_{\alpha}\in\Tau_c\).
+  Now, let's take a finite intersections of elements of \(\Tau_c\).
+  Then
+  \[
+  X - \bigcap_{i = 1}^nU_i = \bigcup_{i = 1}^n(X - U_i)
+  \]
+  Agian, we have that \(X - U_i\) is countable and the finite union of
+  countable sets is countable so \(\bigcap_1^nU_i\in\Tau_c\) and \(\Tau_c\) is
+  a topology on \(X\).
+  For the second part, let \(X = \mathbb{R}\).
+  Let \(U_1 = \mathbb{R}\setminus\{x\}\) where \(x\) can be any real number you
+  choose.
+  Then \(X - U_1 = \{x\}\) which is a single element and is hence finite.
+  Therefore, \(\Tau_{\infty}\) is not a topology on \(X\).
 \item
   \begin{exercise}[label = (\alph*)]
   \item
     If \(\Tau_{\alpha}\) is a family of topologies on \(X\), show that
     \(\bigcap\Tau_{\alpha}\) is a topology on \(X\).
     Is \(\bigcup\Tau_{\alpha}\) a topology on \(X\)?
+    \par\smallskip
+    Since, for each \(\alpha\), \(\Tau_{\alpha}\) is a topology,
+    \(X,\varnothing\in\Tau_{\alpha}\) so
+    \(X,\varnothing\in\bigcap\Tau_{\alpha}\).
+    Let \(U_n\in\bigcap\Tau_{\alpha}\) be basis elements of
+    \(\bigcap\Tau_{\alpha}\).
+    Then \(U_n\), for each \(\alpha\), exists in \(\Tau_{\alpha}\).
+    Therefore, \(U_n\) is a basis element for each \(\Tau_{\alpha}\).
+    \(\bigcap_1^kU_i\) is the finite intersection of basis elements of
+    \(\Tau_{\alpha}\); thus, \(\bigcap_1^kU_i\in\Tau_{\alpha}\).
+    Let's consider the arbitrary intersection of \(U_n\).
+    For each \(\alpha\), \(U_n\) exist in \(\Tau_{\alpha}\).
+    Then \(\bigcup U_n\in\Tau_{\alpha}\).
+    Hence \(\bigcap\Tau_{\alpha}\) is a topology on \(X\).
   \item
     Let \(\{\Tau_{\alpha}\}\) be a family of topologies on \(X\).
     Show that there is a unique smallest topology on \(X\) containing all the
