@@ -126,6 +126,15 @@
     For each \(\alpha\), \(U_n\) exist in \(\Tau_{\alpha}\).
     Then \(\bigcup U_n\in\Tau_{\alpha}\).
     Hence \(\bigcap\Tau_{\alpha}\) is a topology on \(X\).
+    For the union, let \(X = \{a,b,c\}\) and
+    \(\Tau_{\alpha} = \{\Tau_1,\Tau_2\}\) where
+    \(\Tau_1 = \{\varnothing,\{a\},X\}\) and
+    \(\Tau_2 = \{\varnothing,\{b\},X\}\).
+    Then \(\bigcup\Tau_{\alpha} = \{\varnothing,\{a\},\{b\},X\}\).
+    Now the union of elements in \(\Tau_{\alpha}\) must be in
+    \(\Tau_{\alpha}\).
+    However, \(\{a\}\cup\{b\} = \{a,b\}\not\in\Tau_{\alpha}\).
+    Hence, the union is not a topology on \(X\).
   \item
     Let \(\{\Tau_{\alpha}\}\) be a family of topologies on \(X\).
     Show that there is a unique smallest topology on \(X\) containing all the
@@ -139,6 +148,11 @@
     \]
     Find the smallest topology containing \(\Tau_1\) and \(\Tau_2\), and the
     largest topology containing \(\Tau_1\) and \(\Tau_2\).
+    \par\smallskip
+    The smallest topology containing \(\Tau_1\) and \(\Tau_2\) is
+    \(\Tau_s = \{\varnothing,\{a\},\{b\},\{a,b\},\{b,c\},X\}\) and the largest
+    is
+    \(\Tau_l = \{\varnothing,\{a\},\{b\},\{c\},\{a,b\},\{b,c\},\{a,c\},X\}\).
   \end{exercise}
 \item
   Show that if \(\mathcal{A}\) is a basis for a topology on \(X\), then the
