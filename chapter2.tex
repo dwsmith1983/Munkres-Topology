@@ -28,16 +28,16 @@
   Let \(X = \{a,b,c\}\).
   Next, let's index the nine topologies.
   \begin{align*}
-    \Tau_1 & = \{\varnothing, X\} & \qquad
-    \Tau_2 & = \{\varnothing, \{a\}, \{a, b\}, X\} & \qquad
-    \Tau_3 & = \{\varnothing, \{b\}, \{a, b\}, \{b, c\}, X\}\\
-    \Tau_4 & = \{\varnothing, \{b\}, X\} & \qquad
-    \Tau_5 & = \{\varnothing, \{a\}, \{b, c\}, X\} & \qquad
-    \Tau_6 & = \{\varnothing, \{b\}, \{c\}, \{a, b\}, \{b, c\}, X\}\\
-    \Tau_7 & = \{\varnothing, \{a, b\}, X\} & \qquad
-    \Tau_8 & = \{\varnothing, \{a\}, \{b\}, \{a, b\}, X\} & \qquad
-    \Tau_9
-    & = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a, b\}, \{b, c\}, \{a, c\}, X\}
+    \Tau_1 & = \{\varnothing, X\}
+    & \qquad \Tau_2 & = \{\varnothing, \{a\}, \{a, b\}, X\}
+    & \qquad \Tau_3 & = \{\varnothing, \{b\}, \{a, b\}, \{b, c\}, X\}\\
+    \Tau_4 & = \{\varnothing, \{b\}, X\}
+    & \qquad \Tau_5 & = \{\varnothing, \{a\}, \{b, c\}, X\}
+    & \qquad\Tau_6 & = \{\varnothing, \{b\}, \{c\}, \{a, b\}, \{b, c\}, X\}\\
+    \Tau_7 & = \{\varnothing, \{a, b\}, X\}
+    & \qquad \Tau_8 & = \{\varnothing, \{a\}, \{b\}, \{a, b\}, X\}
+    & \qquad \Tau_9 & = \{\varnothing, \{a\}, \{b\}, \{c\}, \{a, b\},
+                      \{b, c\}, \{a, c\}, X\}
   \end{align*}
   A topology \(\Tau_i\) is comparable with \(\Tau_j\) for \(i\neq j\) if either
   \(\Tau_i\supset\Tau_j\) or \(\Tau_i\subset\Tau_j\).
@@ -174,21 +174,32 @@
   not comparable.
   \par\smallskip
   The lower limit topology, \(\mathbb{R}_{\ell}\), is
-  \([a,b) = \{x\mid a\leq x < b\}\) and K-topology, \(\mathbb{R}_K\), is the
-  collection of all open intervals \((a,b)\) along with all sets of the form
-  \((a,b) - K\) where \(K = \{1/n\mid n\in\mathbb{Z}^+\}\).
+  \([a,b) = \{x\mid a\leq x < b\}\) and the K-topology, \(\mathbb{R}_K\),
+  is the collection of all open intervals \((a,b)\) along with all sets of the
+  form \((a,b) - K\) where \(K = \{1/n\mid n\in\mathbb{Z}^+\}\).
 \item
   Consider the following topologies on \(\mathbb{R}\):
   \begin{align*}
-    \Tau_1 & = \text{the standard topology,}\\
+    \Tau_1 & = \text{the standard topology, having all sets } (a, b)
+             \text{ as a basis,}\\
     \Tau_2 & = \text{the topology of } \mathbb{R}_K,\\
-    \Tau_3 & = \text{the finite complement topology,}\\
+    \Tau_3 & = \text{the finite complement topology, having all sets }
+             \Tau = \{X\subset\mathbb{R}\colon X = \varnothing\text{ or }
+             \mathbb{R}\setminus X\text{ is finite}\}\\
     \Tau_4 & = \text{the upper limit topology, having all sets } (a, b]
              \text{ as a basis,}\\
     \Tau_5 & = \text{the topology having all sets }
              (-\infty, a) = \{x\mid x < a\} \text{ as a basis.}
   \end{align*}
   Determine, for each of these topologies, which of the others it contains.
+  \par\smallskip
+  Lemma \(13.4\colon\) The topologies of \(\mathbb{R}_{\ell}\) and
+  \(\mathbb{R}_K\) are strictly finer than the standard topology on
+  \(\mathbb{R}\), but are not comparbale with one another where
+  \(\mathbb{R}_{\ell}\) is the lower limit topology.
+  However, from lemma \(13.4\), we can show that upper limit topology is
+  strictly finer than the standard topology.
+  Therefore, we know that \(\Tau_1\subset\Tau_2,\Tau_4\).
 \item
   \begin{exercise}[label = (\alph*)]
   \item
@@ -204,6 +215,54 @@
     \]
     is a basis that generates a topology different from the lower limit
     topology on \(\mathbb{R}\).
+  \end{exercise}
+\end{exercise}
+
+\section{The Order Topology}
+
+\section{The Product Topology on \(X\times Y\)}
+
+\section{The Subspace Topology}
+
+\begin{exercise}
+\item
+  Show that if \(Y\) is a subspace of \(X\), and \(A\) is a subset of \(Y\),
+  then the topology \(A\) inherits as a subspace of \(Y\) is the same as the
+  topology it inherits as a subspace of \(X\).
+\item
+  It \(\Tau\) and \(\Tau'\) are topologies on \(X\) and \(\Tau'\) is strictly
+  finer than \(\Tau\), \(\Tau'\subset\Tau\), what can you say about the
+  corresponding subspace topologies on the subset \(Y\) of \(X\)?\
+\item
+  Consider the set \(Y = [-1,1]\) as a subspace of \(\mathbb{R}\).
+  Which of the following sets are open in \(Y\)? Which are open in \
+  \(\mathbb{R}\)?
+  \begin{align*}
+    A & = \{x\colon 1/2 < \lvert x\rvert < 1\}\\
+    B & = \{x\colon 1/2 < \lvert x\rvert\leq 1\}\\
+    C & = \{x\colon 1/2\leq \lvert x\rvert < 1\}\\
+    D & = \{x\colon 1/2\leq \lvert x\rvert\leq 1\}\\
+    E & = \{x\colon 0 < \lvert x\rvert < 1\text{ and } 1/x\not\in\mathbb{Z}^+\}
+  \end{align*}
+\item
+  A map \(f\colon X\to Y\) is said to be an \textit{open map} if for every open
+  set \(U\) of \(X\), the set \(f(U)\) is open in \(Y\).
+  Show that \(\pi_1\colon X\times Y\to X\) and \(\pi_2\colon X\times Y\to Y\)
+  are open maps.
+\item
+  Let \(X\) and \(X'\) denote a single set in the topologies \(\Tau\) and
+  \(\Tau'\), respectively; let \(Y\) and \(Y'\) denote a single set in the
+  topologies \(U\) and \(U'\), respectively.
+  Assume these sets are nonempty.
+  \begin{exercise}[label = (\alph*), ref = \arabic{exercisei} (\alph*)]
+  \item
+    \label{ch2sec55a}
+    Show that if \(\Tau'\supset\Tau\) and \(U'\supset U\), then the product
+    topology on \(X'\times Y'\) is finer than the product topology on
+    \(X\times Y\).
+  \item
+    Does the converse of \cref{ch2sec55a} hold?
+    Justify your answer.
   \end{exercise}
 \end{exercise}
 
