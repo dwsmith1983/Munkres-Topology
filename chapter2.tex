@@ -229,9 +229,26 @@
   Show that if \(Y\) is a subspace of \(X\), and \(A\) is a subset of \(Y\),
   then the topology \(A\) inherits as a subspace of \(Y\) is the same as the
   topology it inherits as a subspace of \(X\).
+  \par\smallskip
+  Let \(\Tau_X\) be the topology on \(X\) and \(U\) be a basis of \(\Tau_X\).
+  Then \(\Tau_Y = \{Y\cap U\colon U\in\Tau_X\}\).
+  Let \(V = Y\cap U\).
+  Then \(\Tau_A = \{A\cap V\colon V\in\Tau_Y\}\).
+  We now have that \(A\cap V = A\cap Y\cap U\), and since
+  \(A\subset Y\subset X\), \(A\cap Y = A\).
+  Then \(\Tau_A^X = \{A\cap U\colon U\in \Tau_X\}\) and
+  \(\Tau_A\subset\Tau_A^X\).
+  Let \(U\cap A\in\Tau_A^X\).
+  Since \(U\) is open in \(X\), \(U\cap Y\) is open relative to \(Y\) so
+  \(U\cap Y\in\Tau_Y\).
+  Then \(U\cap Y\cap A\in\Tau_A\) since \(U\cap Y\in\Tau_Y\) and
+  \(U\cap Y\cap A = U\cap A\in\Tau_A\).
+  Therefore, \(\Tau_A = \Tau_A^X\) and the topology \(A\) inherits as a
+  subspace of \(Y\) is the same as the topology it inherits as a subspace of
+  \(X\).
 \item
   It \(\Tau\) and \(\Tau'\) are topologies on \(X\) and \(\Tau'\) is strictly
-  finer than \(\Tau\), \(\Tau'\subset\Tau\), what can you say about the
+  finer than \(\Tau\), \(\Tau'\supset\Tau\), what can you say about the
   corresponding subspace topologies on the subset \(Y\) of \(X\)?\
 \item
   Consider the set \(Y = [-1,1]\) as a subspace of \(\mathbb{R}\).
@@ -264,6 +281,33 @@
     Does the converse of \cref{ch2sec55a} hold?
     Justify your answer.
   \end{exercise}
+\item
+  Show that the countable collection
+  \[
+  \{(a, b)\times (c, d)\colon a < b\text{ and } c < d, \text{ and } a, b, c, d
+  \text{ rational}\}
+  \]
+  is a basis for \(\mathbb{R}^2\).
+\item
+  Let \(X\) be an ordered set.
+  If \(Y\) is a proper subset of \(X\) that is convex in \(X\), does it follow
+  that \(Y\) is an interval or a ray in \(X\)?
+\item
+  If \(L\) is a straight line in the plane, describe the topology \(L\)
+  inherits as a subspace of \(\mathbb{R}_{\ell}\times\mathbb{R}\) and as a
+  subspace of \(\mathbb{R}_{\ell}\times\mathbb{R}_{\ell}\).
+  In each case it is a familiar topology.
+\item
+  Show that the dictionary order topology on the set
+  \(\mathbb{R}\times\mathbb{R}\) is the same as the product topology
+  \(\mathbb{R}_d\times\mathbb{R}\), where \(\mathbb{R}_d\) denotes
+  \(\mathbb{R}\) in the discrete topology.
+  Compare this topology with the standard topology on \(\mathbb{R}^2\).
+\item
+  Let \(I = [0,1]\).
+  Compare the product topology on \(I\times I\), the dictionary order topology
+  on \(I\times I\), and the topology \(I\times I\) inherits as a subspace of
+  \(\mathbb{R}\times\mathbb{R}\) in the dictionary order topology.
 \end{exercise}
 
 %%% Local Variables:
