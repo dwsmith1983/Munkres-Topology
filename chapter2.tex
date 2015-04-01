@@ -147,12 +147,12 @@
     \Tau_2 = \{\varnothing, X, \{a\}, \{b, c\}\}.
     \]
     Find the smallest topology containing \(\Tau_1\) and \(\Tau_2\), and the
-    largest topology containing \(\Tau_1\) and \(\Tau_2\).
+    largest topology contained in \(\Tau_1\) and \(\Tau_2\).
     \par\smallskip
     The smallest topology containing \(\Tau_1\) and \(\Tau_2\) is
-    \(\Tau_s = \{\varnothing,\{a\},\{b\},\{a,b\},\{b,c\},X\}\) and the largest
+    \(\Tau_s = \{\varnothing,\{a,b\},\{b,c\},X\}\) and the largest contained in
     is
-    \(\Tau_l = \{\varnothing,\{a\},\{b\},\{c\},\{a,b\},\{b,c\},\{a,c\},X\}\).
+    \(\Tau_l = \{\varnothing,\{a\},X\}\).
   \end{exercise}
 \item
   Show that if \(\mathcal{A}\) is a basis for a topology on \(X\), then the
@@ -177,6 +177,28 @@
   \([a,b) = \{x\mid a\leq x < b\}\) and the K-topology, \(\mathbb{R}_K\),
   is the collection of all open intervals \((a,b)\) along with all sets of the
   form \((a,b) - K\) where \(K = \{1/n\mid n\in\mathbb{Z}^+\}\).
+  Consider the basis element \([2,3)\) in the lower limit topology.
+  \([2,3)\) is open in \(\mathbb{R}_{\ell}\), but I claim it isn't open in
+  \(\mathbb{R}_K\).
+  Let \(\mathcal{B}\) be a basis element for \(\mathbb{R}_K\).
+  Suppose \(2\in\mathcal{B}\subset [2,3)\).
+  Basis elements in \(\mathbb{R}_K\) are of the form \((a,b)\) or
+  \((a,b) - K\).
+  If \(2\in\mathcal{B}\), then \(a < 2\).
+  Therefore, there exists an \(x\) such that \(\max(a,1) < x < 2\) so
+  \(x\not\in K\).
+  Then \(x\) is in the basis element \(\mathcal{B}\), but \(x\not\in [2,3)\).
+  Thus, \([2,3)\) is not open in \(\mathbb{R}_K\).
+  Consider the basis element \((-1,1) - K\).
+  Now, \((-1,1) - K\) is open in \(\mathbb{R}_K\), but I claim it isn't open in
+  \(\mathbb{R}_{\ell}\).
+  Let \(\mathcal{B}\) be a basis element of \(\mathbb{R}_{\ell}\) such that
+  \(0\in\mathcal{B}\subset\{(-1,1) - K\}\).
+  Let \(\mathcal{B} = [a,b)\) be a basis element containg zero.
+  Then \(a\leq 0\) and \(b > 0\).
+  Let \(n\) be an integer such that \(nb > 1\iff 1/n < b\).
+  Then \(1/n\in K\) and \(1/n\in\mathcal{B}\).
+  Therefore, \(1/n\not\in (-1,1)\) so \(\mathcal{B}\not\subset\{(-1,1) - K\}\).
 \item
   Consider the following topologies on \(\mathbb{R}\):
   \begin{align*}
@@ -247,9 +269,11 @@
   subspace of \(Y\) is the same as the topology it inherits as a subspace of
   \(X\).
 \item
-  It \(\Tau\) and \(\Tau'\) are topologies on \(X\) and \(\Tau'\) is strictly
+  If \(\Tau\) and \(\Tau'\) are topologies on \(X\) and \(\Tau'\) is strictly
   finer than \(\Tau\), \(\Tau'\supset\Tau\), what can you say about the
-  corresponding subspace topologies on the subset \(Y\) of \(X\)?\
+  corresponding subspace topologies on the subset \(Y\) of \(X\)?
+  \par\smallskip
+  The inherited topologies can be the same.
 \item
   Consider the set \(Y = [-1,1]\) as a subspace of \(\mathbb{R}\).
   Which of the following sets are open in \(Y\)? Which are open in \
